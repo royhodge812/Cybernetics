@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybernetics — Contributor Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617; /* slate-950 */
+            color: #f8fafc; /* slate-50 */
+        }
+
+        .cyber-grid {
+            background-image: linear-gradient(to right, #1e293b 1px, transparent 1px),
+                              linear-gradient(to bottom, #1e293b 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #818cf8 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .workflow-step:hover {
+            transform: translateY(-4px);
+            transition: all 0.3s ease;
+            border-color: #818cf8;
+            box-shadow: 0 0 20px rgba(129, 140, 248, 0.2);
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+    </style>
+</head>
+<body class="cyber-grid min-h-screen">
+
+    <!-- Header Section -->
+    <header class="pt-16 pb-12 px-6 text-center">
+        <div class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider text-emerald-400 uppercase bg-emerald-400/10 border border-emerald-400/20 rounded-full">
+            Hackathon Ready — June 2026
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
+            Cybernetics <span class="gradient-text">Omni-MCP</span>
+        </h1>
+        <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-light">
+            Autonomous SRE & Unified Model Context Gateway. Powering the next generation of self-healing infrastructure.
+        </p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pb-24 space-y-16">
+
+        <!-- Sentinel Workflow Section -->
+        <section>
+            <div class="flex items-center gap-3 mb-8">
+                <i data-lucide="activity" class="text-indigo-400 w-8 h-8"></i>
+                <h2 class="text-3xl font-bold">Sentinel SRE Workflow</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4">
+                    <div class="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mx-auto">
+                        <i data-lucide="radar" class="text-indigo-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-sm uppercase tracking-widest text-indigo-300">Detect</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Dynatrace monitors services and fires alerts.</p>
+                </div>
+
+                <div class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4">
+                    <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto">
+                        <i data-lucide="search" class="text-emerald-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-sm uppercase tracking-widest text-emerald-300">Investigate</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Elastic surfaces logs, incidents, and runbooks.</p>
+                </div>
+
+                <div class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4">
+                    <div class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center mx-auto">
+                        <i data-lucide="brain-circuit" class="text-amber-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-sm uppercase tracking-widest text-amber-300">Reason</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">MongoDB memory recalls patterns and resolutions.</p>
+                </div>
+
+                <div class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4">
+                    <div class="w-12 h-12 bg-rose-500/20 rounded-xl flex items-center justify-center mx-auto">
+                        <i data-lucide="terminal" class="text-rose-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-sm uppercase tracking-widest text-rose-300">Act</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">GitLab ships fixes via issues and MRs.</p>
+                </div>
+
+                <div class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4">
+                    <div class="w-12 h-12 bg-sky-500/20 rounded-xl flex items-center justify-center mx-auto">
+                        <i data-lucide="shield-check" class="text-sky-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-sm uppercase tracking-widest text-sky-300">Evaluate</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Arize traces reasoning and runs LLM judge.</p>
+                </div>
+
+                <div class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4">
+                    <div class="w-12 h-12 bg-violet-500/20 rounded-xl flex items-center justify-center mx-auto">
+                        <i data-lucide="database" class="text-violet-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-sm uppercase tracking-widest text-violet-300">Learn</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Fivetran pipelines telemetry into BigQuery.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Broker Architecture Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-8">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="network" class="text-indigo-400 w-8 h-8"></i>
+                    <h2 class="text-3xl font-bold">Omni-MCP Broker</h2>
+                </div>
+                <div class="glass-card p-8 rounded-3xl space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-indigo-500/20 p-2 rounded-lg"><i data-lucide="cpu" class="text-indigo-400 w-5 h-5"></i></div>
+                        <div>
+                            <h4 class="font-bold text-indigo-300 mb-1">Unified Gateway</h4>
+                            <p class="text-sm text-slate-400">FastAPI server exposing SSE and JSON-RPC endpoints for Gemini 3 Pro Agent Builder.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-emerald-500/20 p-2 rounded-lg"><i data-lucide="shield" class="text-emerald-400 w-5 h-5"></i></div>
+                        <div>
+                            <h4 class="font-bold text-emerald-300 mb-1">Sentinel Governance</h4>
+                            <p class="text-sm text-slate-400">Layered middleware providing Audit logs, Safety guards, and Cost estimation per tool call.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-sky-500/20 p-2 rounded-lg"><i data-lucide="plug-zap" class="text-sky-400 w-5 h-5"></i></div>
+                        <div>
+                            <h4 class="font-bold text-sky-300 mb-1">Multi-Track Routing</h4>
+                            <p class="text-sm text-slate-400">Dynamic discovery and routing to 6+ partner MCP tracks plus custom adapters.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-8">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="users" class="text-emerald-400 w-8 h-8"></i>
+                    <h2 class="text-3xl font-bold">Team & Roles</h2>
+                </div>
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="glass-card p-5 rounded-2xl flex items-center justify-between group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center font-bold">U</div>
+                            <div>
+                                <h4 class="font-bold group-hover:text-indigo-300 transition-colors">You</h4>
+                                <p class="text-xs text-slate-400">Project Lead / Orchestrator</p>
+                            </div>
+                        </div>
+                        <i data-lucide="crown" class="text-indigo-500/40 w-5 h-5"></i>
+                    </div>
+
+                    <div class="glass-card p-5 rounded-2xl flex items-center justify-between group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center font-bold">JS</div>
+                            <div>
+                                <h4 class="font-bold group-hover:text-emerald-300 transition-colors">JS (jmagly)</h4>
+                                <p class="text-xs text-slate-400">Lead Framework Architect</p>
+                            </div>
+                        </div>
+                        <i data-lucide="code-2" class="text-emerald-500/40 w-5 h-5"></i>
+                    </div>
+
+                    <div class="glass-card p-5 rounded-2xl flex items-center justify-between group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center font-bold">S</div>
+                            <div>
+                                <h4 class="font-bold group-hover:text-amber-300 transition-colors">Sebuh</h4>
+                                <p class="text-xs text-slate-400">Broker Architect</p>
+                            </div>
+                        </div>
+                        <i data-lucide="layers" class="text-amber-500/40 w-5 h-5"></i>
+                    </div>
+
+                    <div class="glass-card p-5 rounded-2xl flex items-center justify-between group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-rose-500 rounded-full flex items-center justify-center font-bold">G</div>
+                            <div>
+                                <h4 class="font-bold group-hover:text-rose-300 transition-colors">Gregory (Gory Grey)</h4>
+                                <p class="text-xs text-slate-400">Security & Governance Lead</p>
+                            </div>
+                        </div>
+                        <i data-lucide="lock" class="text-rose-500/40 w-5 h-5"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checklist Section -->
+        <section class="max-w-4xl mx-auto">
+            <div class="glass-card p-10 rounded-[3rem] space-y-8 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-10">
+                    <i data-lucide="list-checks" class="w-32 h-32"></i>
+                </div>
+                
+                <div class="relative">
+                    <h2 class="text-4xl font-bold mb-2">Next Steps</h2>
+                    <p class="text-slate-400">Your roadmap to a successful hackathon submission.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <label class="flex items-center gap-4 p-4 rounded-2xl hover:bg-slate-800/50 cursor-pointer border border-transparent hover:border-slate-700 transition-all">
+                        <input type="checkbox" class="w-6 h-6 rounded-lg bg-slate-900 border-slate-700 text-emerald-500 focus:ring-emerald-500/20">
+                        <div class="flex-1">
+                            <h4 class="font-semibold">Infrastructure Deployment</h4>
+                            <p class="text-sm text-slate-400">Deploy the Omni-MCP Broker to Google Cloud Run.</p>
+                        </div>
+                    </label>
+
+                    <label class="flex items-center gap-4 p-4 rounded-2xl hover:bg-slate-800/50 cursor-pointer border border-transparent hover:border-slate-700 transition-all">
+                        <input type="checkbox" class="w-6 h-6 rounded-lg bg-slate-900 border-slate-700 text-emerald-500 focus:ring-emerald-500/20">
+                        <div class="flex-1">
+                            <h4 class="font-semibold">Secrets Configuration</h4>
+                            <p class="text-sm text-slate-400">Populate <span class="mono text-emerald-400 text-xs px-1.5 py-0.5 bg-emerald-400/10 rounded">config.yaml</span> with real partner API tokens.</p>
+                        </div>
+                    </label>
+
+                    <label class="flex items-center gap-4 p-4 rounded-2xl hover:bg-slate-800/50 cursor-pointer border border-transparent hover:border-slate-700 transition-all">
+                        <input type="checkbox" class="w-6 h-6 rounded-lg bg-slate-900 border-slate-700 text-emerald-500 focus:ring-emerald-500/20">
+                        <div class="flex-1">
+                            <h4 class="font-semibold">Agent Builder Linkage</h4>
+                            <p class="text-sm text-slate-400">Point Agent Builder SSE to the deployed broker endpoint.</p>
+                        </div>
+                    </label>
+
+                    <label class="flex items-center gap-4 p-4 rounded-2xl hover:bg-slate-800/50 cursor-pointer border border-transparent hover:border-slate-700 transition-all">
+                        <input type="checkbox" class="w-6 h-6 rounded-lg bg-slate-900 border-slate-700 text-emerald-500 focus:ring-emerald-500/20">
+                        <div class="flex-1">
+                            <h4 class="font-semibold">Governance Audit</h4>
+                            <p class="text-sm text-slate-400">Verify tool call validation via <span class="mono text-rose-400 text-xs px-1.5 py-0.5 bg-rose-400/10 rounded">logs/audit.jsonl</span>.</p>
+                        </div>
+                    </label>
+
+                    <label class="flex items-center gap-4 p-4 rounded-2xl hover:bg-slate-800/50 cursor-pointer border border-transparent hover:border-slate-700 transition-all">
+                        <input type="checkbox" class="w-6 h-6 rounded-lg bg-slate-900 border-slate-700 text-emerald-500 focus:ring-emerald-500/20">
+                        <div class="flex-1">
+                            <h4 class="font-semibold">Submission Prep</h4>
+                            <p class="text-sm text-slate-400">Record the ~3 minute demo and finalize the open-source README.</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-slate-800 text-center">
+        <p class="text-slate-500 text-sm tracking-widest uppercase">
+            Built by Gemini CLI for the Cybernetics Team
+        </p>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Add some basic interaction to checkboxes
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const label = this.parentElement;
+                if (this.checked) {
+                    label.classList.add('opacity-50');
+                    label.querySelector('h4').classList.add('line-through');
+                } else {
+                    label.classList.remove('opacity-50');
+                    label.querySelector('h4').classList.remove('line-through');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

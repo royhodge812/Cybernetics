@@ -1,0 +1,8 @@
+https://github.com/sebuh-infsol/Cybernetics -- https://github.com/strawberr0/Cybernetics
+
+https://rapid-agent.devpost.com/resources --> resource url for hackathon 
+
+
+seb's branch is 5 commits ahead of organization's branch.. let's make sure we do a full review an analysis of both to get an understanding of what is happening..
+
+one of my higher priority goals for this is clear easy to understand and follow onboarding an usage instructions, which i will manually verify as we iterate.
