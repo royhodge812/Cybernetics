@@ -68,73 +68,101 @@
             <div class="flex items-center justify-between mb-8">
                 <div class="flex items-center gap-3">
                     <i data-lucide="activity" class="text-indigo-400 w-8 h-8"></i>
-                    <h2 class="text-3xl font-bold">Sentinel SRE Workflow</h2>
+                    <h2 class="text-3xl font-bold">Sentinel SRE Workflow <span class="text-sm font-normal text-slate-500 ml-2">Powered by Multi-Track MCP</span></h2>
                 </div>
-                <button onclick="startSimulation()" class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-bold rounded-xl transition-all flex items-center gap-2 shadow-lg shadow-indigo-500/20">
-                    <i data-lucide="play" class="w-4 h-4"></i>
-                    Run Test Simulation
-                </button>
+                <div class="flex gap-4">
+                    <div class="flex -space-x-2">
+                        <!-- Placeholder for Partner Icons/Images -->
+                        <div class="w-8 h-8 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center text-[10px] font-bold text-indigo-400">AZ</div>
+                        <div class="w-8 h-8 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center text-[10px] font-bold text-emerald-400">EL</div>
+                        <div class="w-8 h-8 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center text-[10px] font-bold text-amber-400">MD</div>
+                        <div class="w-8 h-8 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center text-[10px] font-bold text-rose-400">GL</div>
+                        <div class="w-8 h-8 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center text-[10px] font-bold text-sky-400">DT</div>
+                    </div>
+                    <button onclick="startSimulation()" class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-bold rounded-xl transition-all flex items-center gap-2 shadow-lg shadow-indigo-500/20">
+                        <i data-lucide="play" class="w-4 h-4"></i>
+                        Test End-to-End Logic
+                    </button>
+                </div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 relative">
-                <!-- Step 1 -->
-                <div id="step-detect" class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4 relative z-10 transition-all duration-500">
+                <!-- Step 1: Dynatrace -->
+                <div id="step-detect" class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4 relative z-10 transition-all duration-500 overflow-hidden">
+                    <div class="absolute inset-0 opacity-5 pointer-events-none">
+                        <img src="images-and-music-from-telegram-group/photo_2026-05-16_20-12-14.jpg" class="w-full h-full object-cover">
+                    </div>
                     <div class="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mx-auto">
                         <i data-lucide="radar" class="text-indigo-400 w-6 h-6"></i>
                     </div>
                     <h3 class="font-bold text-sm uppercase tracking-widest text-indigo-300">Detect</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Dynatrace monitors services and fires alerts.</p>
-                    <div class="simulation-status hidden text-[10px] text-emerald-400 font-mono mt-2">Problem detected...</div>
+                    <p class="text-xs text-slate-400 leading-relaxed">Dynatrace MCP: Real-time anomaly detection.</p>
+                    <div class="simulation-status hidden text-[10px] text-emerald-400 font-mono mt-2 animate-pulse">Dynatrace Alert: Critical!</div>
                 </div>
 
-                <!-- Step 2 -->
-                <div id="step-investigate" class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4 relative z-10 transition-all duration-500">
+                <!-- Step 2: Elastic -->
+                <div id="step-investigate" class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4 relative z-10 transition-all duration-500 overflow-hidden">
+                    <div class="absolute inset-0 opacity-5 pointer-events-none">
+                        <img src="images-and-music-from-telegram-group/photo_2026-05-16_20-12-08.jpg" class="w-full h-full object-cover">
+                    </div>
                     <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto">
                         <i data-lucide="search" class="text-emerald-400 w-6 h-6"></i>
                     </div>
                     <h3 class="font-bold text-sm uppercase tracking-widest text-emerald-300">Investigate</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Elastic surfaces logs, incidents, and runbooks.</p>
-                    <div class="simulation-status hidden text-[10px] text-emerald-400 font-mono mt-2">Searching logs...</div>
+                    <p class="text-xs text-slate-400 leading-relaxed">Elastic MCP: Hybrid log/incidents search.</p>
+                    <div class="simulation-status hidden text-[10px] text-emerald-400 font-mono mt-2 animate-pulse">Elastic: Found Root Cause</div>
                 </div>
 
-                <!-- Step 3 -->
-                <div id="step-reason" class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4 relative z-10 transition-all duration-500">
+                <!-- Step 3: MongoDB -->
+                <div id="step-reason" class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4 relative z-10 transition-all duration-500 overflow-hidden">
+                    <div class="absolute inset-0 opacity-5 pointer-events-none">
+                        <img src="images-and-music-from-telegram-group/photo_2026-05-16_20-11-54.jpg" class="w-full h-full object-cover">
+                    </div>
                     <div class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center mx-auto">
                         <i data-lucide="brain-circuit" class="text-amber-400 w-6 h-6"></i>
                     </div>
                     <h3 class="font-bold text-sm uppercase tracking-widest text-amber-300">Reason</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">MongoDB memory recalls patterns and resolutions.</p>
-                    <div class="simulation-status hidden text-[10px] text-emerald-400 font-mono mt-2">Matching pattern...</div>
+                    <p class="text-xs text-slate-400 leading-relaxed">MongoDB MCP: Vectorized pattern recall.</p>
+                    <div class="simulation-status hidden text-[10px] text-emerald-400 font-mono mt-2 animate-pulse">Mongo: Pattern Matched</div>
                 </div>
 
-                <!-- Step 4 -->
-                <div id="step-act" class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4 relative z-10 transition-all duration-500">
+                <!-- Step 4: GitLab -->
+                <div id="step-act" class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4 relative z-10 transition-all duration-500 overflow-hidden">
+                    <div class="absolute inset-0 opacity-5 pointer-events-none">
+                        <img src="images-and-music-from-telegram-group/photo_2026-05-16_20-12-00.jpg" class="w-full h-full object-cover">
+                    </div>
                     <div class="w-12 h-12 bg-rose-500/20 rounded-xl flex items-center justify-center mx-auto">
                         <i data-lucide="terminal" class="text-rose-400 w-6 h-6"></i>
                     </div>
                     <h3 class="font-bold text-sm uppercase tracking-widest text-rose-300">Act</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">GitLab ships fixes via issues and MRs.</p>
-                    <div class="simulation-status hidden text-[10px] text-emerald-400 font-mono mt-2">Opening MR #742...</div>
+                    <p class="text-xs text-slate-400 leading-relaxed">GitLab MCP: Automated PRs & Pipelines.</p>
+                    <div class="simulation-status hidden text-[10px] text-emerald-400 font-mono mt-2 animate-pulse">GitLab: Shipping Fix...</div>
                 </div>
 
-                <!-- Step 5 -->
-                <div id="step-evaluate" class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4 relative z-10 transition-all duration-500">
+                <!-- Step 5: Arize -->
+                <div id="step-evaluate" class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4 relative z-10 transition-all duration-500 overflow-hidden">
+                    <div class="absolute inset-0 opacity-5 pointer-events-none">
+                        <img src="images-and-music-from-telegram-group/photo_2026-05-16_20-11-45.jpg" class="w-full h-full object-cover">
+                    </div>
                     <div class="w-12 h-12 bg-sky-500/20 rounded-xl flex items-center justify-center mx-auto">
                         <i data-lucide="shield-check" class="text-sky-400 w-6 h-6"></i>
                     </div>
-                    <h3 class="font-bold text-sm uppercase tracking-widest text-sky-300">Evaluate</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Arize traces reasoning and runs LLM judge.</p>
-                    <div class="simulation-status hidden text-[10px] text-emerald-400 font-mono mt-2">Judging accuracy...</div>
+                    <h3 class="font-bold text-sm uppercase tracking-widest text-sky-300">Verify</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Arize MCP: Trace tracing & Evaluation.</p>
+                    <div class="simulation-status hidden text-[10px] text-emerald-400 font-mono mt-2 animate-pulse">Arize: Validation Pass</div>
                 </div>
 
-                <!-- Step 6 -->
-                <div id="step-learn" class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4 relative z-10 transition-all duration-500">
+                <!-- Step 6: Fivetran -->
+                <div id="step-learn" class="workflow-step glass-card p-6 rounded-2xl text-center space-y-4 relative z-10 transition-all duration-500 overflow-hidden">
+                    <div class="absolute inset-0 opacity-5 pointer-events-none">
+                        <img src="images-and-music-from-telegram-group/photo_2026-05-16_20-12-19.jpg" class="w-full h-full object-cover">
+                    </div>
                     <div class="w-12 h-12 bg-violet-500/20 rounded-xl flex items-center justify-center mx-auto">
                         <i data-lucide="database" class="text-violet-400 w-6 h-6"></i>
                     </div>
                     <h3 class="font-bold text-sm uppercase tracking-widest text-violet-300">Learn</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Fivetran pipelines telemetry into BigQuery.</p>
-                    <div class="simulation-status hidden text-[10px] text-emerald-400 font-mono mt-2">Archiving state...</div>
+                    <p class="text-xs text-slate-400 leading-relaxed">Fivetran MCP: BigQuery Data Sync.</p>
+                    <div class="simulation-status hidden text-[10px] text-emerald-400 font-mono mt-2 animate-pulse">Syncing to BigQuery</div>
                 </div>
             </div>
             
@@ -148,7 +176,7 @@
             <div class="space-y-8">
                 <div class="flex items-center gap-3">
                     <i data-lucide="users" class="text-emerald-400 w-8 h-8"></i>
-                    <h2 class="text-3xl font-bold">The Cybernetics Team</h2>
+                    <h2 class="text-3xl font-bold">Winning Strategy: "The Multi-Track SRE"</h2>
                 </div>
                 <div class="grid grid-cols-1 gap-4">
                     <!-- JS (jmagly) -->
@@ -158,15 +186,15 @@
                                 <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center font-bold text-lg">JS</div>
                                 <div>
                                     <h4 class="font-bold text-lg group-hover:text-emerald-300 transition-colors">JS (jmagly)</h4>
-                                    <p class="text-xs text-slate-400">Sentinel SRE & Framework Lead</p>
+                                    <p class="text-xs text-slate-400">Master Orchestrator (Sentinel Lead)</p>
                                 </div>
                             </div>
-                            <span class="px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-[10px] text-emerald-400 uppercase tracking-tighter">Sentinel Lead</span>
+                            <span class="px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-[10px] text-emerald-400 uppercase tracking-tighter font-bold">Prize Strategy: GitLab Track</span>
                         </div>
                         <div class="pl-16 space-y-2">
-                            <div class="text-xs text-slate-300 font-semibold uppercase tracking-widest">Focus:</div>
-                            <p class="text-xs text-slate-400">Owner of the Sentinel orchestration engine and core framework integrity.</p>
-                            <div class="pt-2 text-xs text-emerald-400/80 italic font-light">Pro Tip: "Keep the orchestration loop stateless to allow for horizontal scaling in Cloud Run."</div>
+                            <div class="text-xs text-slate-300 font-semibold uppercase tracking-widest">Hackathon Mission:</div>
+                            <p class="text-xs text-slate-400">Perfect the "Act" phase. Ensure the GitLab MCP creates rich MRs with code changes, not just issues. This qualifies us for the $10,000 GitLab bucket.</p>
+                            <div class="pt-2 text-xs text-emerald-400/80 italic font-light">Win Tip: "Leverage GitLab Pipelines to verify the fix before the agent closes the loop."</div>
                         </div>
                     </div>
 
@@ -177,15 +205,15 @@
                                 <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center font-bold text-lg">S</div>
                                 <div>
                                     <h4 class="font-bold text-lg group-hover:text-amber-300 transition-colors">Sebuh</h4>
-                                    <p class="text-xs text-slate-400">Broker Architect</p>
+                                    <p class="text-xs text-slate-400">Broker Architect (Omni-Gateway)</p>
                                 </div>
                             </div>
-                            <span class="px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-[10px] text-amber-400 uppercase tracking-tighter">Unified Gateway</span>
+                            <span class="px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-[10px] text-amber-400 uppercase tracking-tighter font-bold">Prize Strategy: MongoDB Track</span>
                         </div>
                         <div class="pl-16 space-y-2">
-                            <div class="text-xs text-slate-300 font-semibold uppercase tracking-widest">Focus:</div>
-                            <p class="text-xs text-slate-400">Orchestrate partner MCP connections and SSE protocol stability.</p>
-                            <div class="pt-2 text-xs text-amber-400/80 italic font-light">Pro Tip: "Implement aggressive caching for tool discovery to minimize SSE latency spikes."</div>
+                            <div class="text-xs text-slate-300 font-semibold uppercase tracking-widest">Hackathon Mission:</div>
+                            <p class="text-xs text-slate-400">Implement "Recall-as-a-Service". Use MongoDB Vector Search to give the agent long-term memory of past resolutions. This covers the MongoDB prize bucket.</p>
+                            <div class="pt-2 text-xs text-amber-400/80 italic font-light">Win Tip: "Showcase dynamic registry loading in the demo to prove the Broker's modularity."</div>
                         </div>
                     </div>
 
@@ -196,78 +224,81 @@
                                 <div class="w-12 h-12 bg-rose-500 rounded-full flex items-center justify-center font-bold text-lg">G</div>
                                 <div>
                                     <h4 class="font-bold text-lg group-hover:text-rose-300 transition-colors">Gregory (Gory Grey)</h4>
-                                    <p class="text-xs text-slate-400">Security & Governance Lead</p>
+                                    <p class="text-xs text-slate-400">Security Lead (Dynatrace Guard)</p>
                                 </div>
                             </div>
-                            <span class="px-3 py-1 bg-rose-500/10 border border-rose-500/20 rounded-full text-[10px] text-rose-400 uppercase tracking-tighter">Sentinel Layer</span>
+                            <span class="px-3 py-1 bg-rose-500/10 border border-rose-500/20 rounded-full text-[10px] text-rose-400 uppercase tracking-tighter font-bold">Prize Strategy: Dynatrace Track</span>
                         </div>
                         <div class="pl-16 space-y-2">
-                            <div class="text-xs text-slate-300 font-semibold uppercase tracking-widest">Focus:</div>
-                            <p class="text-xs text-slate-400">Audit logs, safety blocklists, and cost-per-call validation.</p>
-                            <div class="pt-2 text-xs text-rose-400/80 italic font-light">Pro Tip: "Use regex-based policy enforcement on GitLab tool params to prevent unintended data exfiltration."</div>
+                            <div class="text-xs text-slate-300 font-semibold uppercase tracking-widest">Hackathon Mission:</div>
+                            <p class="text-xs text-slate-400">Integrate Dynatrace events as the "Trigger" for Sentinel. A closed-loop SRE story is exactly what Dynatrace judges are looking for.</p>
+                            <div class="pt-2 text-xs text-rose-400/80 italic font-light">Win Tip: "Document the safety guard logic to prove we aren't letting an LLM 'run wild' in production."</div>
                         </div>
                     </div>
 
-                    <!-- User (Roy) -->
+                    <!-- Roy -->
                     <div class="glass-card p-6 rounded-2xl space-y-4 group ring-1 ring-sky-500/50">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center gap-4">
                                 <div class="w-12 h-12 bg-sky-500 rounded-full flex items-center justify-center font-bold text-lg">R</div>
                                 <div>
                                     <h4 class="font-bold text-lg group-hover:text-sky-300 transition-colors">Roy</h4>
-                                    <p class="text-xs text-slate-400">Onboarding & Init Lead</p>
+                                    <p class="text-xs text-slate-400">Delivery & Onboarding (Demo Lead)</p>
                                 </div>
                             </div>
-                            <span class="px-3 py-1 bg-sky-500/20 border border-sky-500/40 rounded-full text-[10px] text-sky-400 uppercase tracking-tighter font-bold">Documentation & Dev-Env</span>
+                            <span class="px-3 py-1 bg-sky-500/20 border border-sky-500/40 rounded-full text-[10px] text-sky-400 uppercase tracking-tighter font-bold">The Winning Pitch</span>
                         </div>
                         <div class="pl-16 space-y-2">
-                            <div class="text-xs text-slate-300 font-semibold uppercase tracking-widest">Focus:</div>
-                            <p class="text-xs text-slate-400">Bootstrap dev environments, usage guides, and system verification.</p>
-                            <div class="pt-2 text-xs text-sky-400/80 italic font-light">Pro Tip: "Iterate on the onboarding flow by performing a 'clean-slate' install every 3 commits."</div>
+                            <div class="text-xs text-slate-300 font-semibold uppercase tracking-widest">Hackathon Mission:</div>
+                            <p class="text-xs text-slate-400">Package the masterpiece. Create the 3-minute demo video showing the agent "Saving the World" while explicitly highlighting partner MCP usage.</p>
+                            <div class="pt-2 text-xs text-sky-400/80 italic font-light">Win Tip: "Highlight the $30k 'Triple-Track' coverage in the intro. Make the judges feel the scale."</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Strategic Action Checklist -->
+            <!-- Strategic Roadmap Section -->
             <div class="space-y-8">
                 <div class="flex items-center gap-3">
                     <i data-lucide="crosshair" class="text-indigo-400 w-8 h-8"></i>
-                    <h2 class="text-3xl font-bold">Strategic Roadmap</h2>
+                    <h2 class="text-3xl font-bold">The Path to 1st Place</h2>
                 </div>
                 <div class="glass-card p-8 rounded-3xl space-y-6">
+                    <div class="p-4 bg-indigo-500/10 border border-indigo-500/20 rounded-xl">
+                        <h4 class="font-bold text-sm text-indigo-300 mb-2">Strategy: "The Triple Threat"</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">By integrating <b>GitLab</b>, <b>MongoDB</b>, and <b>Dynatrace</b> into a single cohesive story, we qualify for THREE separate $10,000 prize buckets. We don't just win one; we sweep the field.</p>
+                    </div>
+                    
                     <div>
-                        <h4 class="font-bold text-sm uppercase text-slate-500 mb-4 tracking-[0.2em]">JS & Sebuh: Core Sync</h4>
+                        <h4 class="font-bold text-sm uppercase text-slate-500 mb-4 tracking-[0.2em]">Phase 1: Deep Integration (Next 7 Days)</h4>
                         <ul class="text-xs text-slate-400 space-y-3">
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i>
-                                Map all Partner Tool definitions to Gemini-compatible JSON schemas.
+                                <i data-lucide="circle" class="w-4 h-4 text-slate-600"></i>
+                                JS: Implement GitLab MCP "Auto-Fixer" capability.
                             </li>
                             <li class="flex items-center gap-3">
                                 <i data-lucide="circle" class="w-4 h-4 text-slate-600"></i>
-                                Stress-test the SSE multiplexer under multi-agent load.
+                                Sebuh: Finalize MongoDB Vector Store for incident memory.
                             </li>
                         </ul>
                     </div>
+
                     <div>
-                        <h4 class="font-bold text-sm uppercase text-slate-500 mb-4 tracking-[0.2em]">Gregory: Hardening</h4>
+                        <h4 class="font-bold text-sm uppercase text-slate-500 mb-4 tracking-[0.2em]">Phase 2: Governance & Verify</h4>
                         <ul class="text-xs text-slate-400 space-y-3">
                             <li class="flex items-center gap-3">
                                 <i data-lucide="circle" class="w-4 h-4 text-slate-600"></i>
-                                Finalize the budget breaker for the Cost Sentinel.
+                                Gregory: Link Dynatrace Alerts to the Broker's event-loop.
                             </li>
                         </ul>
                     </div>
+
                     <div>
-                        <h4 class="font-bold text-sm uppercase text-slate-500 mb-4 tracking-[0.2em]">Roy: Verification</h4>
+                        <h4 class="font-bold text-sm uppercase text-slate-500 mb-4 tracking-[0.2em]">Phase 3: The Pitch</h4>
                         <ul class="text-xs text-slate-400 space-y-3">
                             <li class="flex items-center gap-3">
                                 <i data-lucide="circle" class="w-4 h-4 text-slate-600"></i>
-                                Document the "Zero-to-Agent" local setup for new contributors.
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <i data-lucide="circle" class="w-4 h-4 text-slate-600"></i>
-                                Verify all Partner tool-calls against the Audit Log.
+                                Roy: Script and Record "Sentinel in Action" — Focus on ROI and Security.
                             </li>
                         </ul>
                     </div>
